@@ -1,0 +1,57 @@
+@import "./index.scss";
+@import "node_modules/bootstrap/scss/bootstrap";
+
+body {
+	background-color: $gunmetal;
+	color: $color;
+}
+body,
+html {
+	height: 100%;
+}
+
+// .nav{
+.hero-image {
+    @include flexCenter();
+    @include button();
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+		url("./bg.jpg");
+	height: 50vh;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+    .text{
+        margin-left: 5%;
+        margin-top: 2%;
+        text-align: center;
+        button{
+            font-size: 1em;
+        }
+    }
+    .image{
+        margin-left: -20%;
+        margin-top: 1.5%;
+        img{
+            max-height: 45vh;
+            position: left;
+        }
+    }
+}
+
+footer {
+	background-color: $liver;
+	position: fixed;
+    text-align: center;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	padding: 0.5%;
+	// border-top: 2px solid $borderbrown;
+	// box-shadow: 2px 2px $borderbrown;
+	z-index: 900;
+    .right{
+        margin-left: 5%;
+    }
+}

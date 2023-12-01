@@ -1,5 +1,33 @@
 //vars
+$gunmetal: #273134ff;
+$liver: #725752ff;
+$blue: #7ab4a8ff;
+$purple: #cbb3bfff;
+$yellow: #fef6c9ff;
+$color: #e5e5e5;
 
 //import
+@import "~bootstrap/scss/bootstrap";
 
 //mixins
+@mixin flexCenter {
+	display: flex;
+	align-content: center;
+	justify-content: center;
+}
+
+@mixin button {
+	button {
+		background-color: $blue;
+		border: none;
+		padding: 1% 2%;
+		margin: 2%;
+		// @include borderRadius();
+	}
+	// button:hover {
+	// 	background-color: $blue-hover;
+	// }
+	// button:active {
+	// 	background-color: $blue-active;
+	// }
+}
