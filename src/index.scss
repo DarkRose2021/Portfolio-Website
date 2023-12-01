@@ -16,13 +16,21 @@ $color: #e5e5e5;
 	justify-content: center;
 }
 
+@mixin borderRadius {
+	border-radius: 5px;
+}
+
+@mixin borderRadiusContainers {
+	border-radius: 10px;
+}
+
 @mixin button {
 	button {
 		background-color: $blue;
 		border: none;
 		padding: 1% 2%;
 		margin: 2%;
-		// @include borderRadius();
+		@include borderRadius();
 	}
 	// button:hover {
 	// 	background-color: $blue-hover;

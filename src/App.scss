@@ -22,11 +22,30 @@ html {
 	background-size: cover;
 	position: relative;
     .text{
+        @include borderRadiusContainers();
+        background-color:rgba($color: $yellow, $alpha: .6);
         margin-left: 5%;
-        margin-top: 2%;
+        margin-top: 8%;
         text-align: center;
+        color: $gunmetal;
+        max-height: 35%;
+        padding: 1%;
+
         button{
-            font-size: 1em;
+            width: 111%;
+            margin-top: 4%;
+            margin-left: -5%;
+            font-size: 1.2em;
+        }
+
+        .icons{
+            color: $gunmetal;
+            &:hover{
+                color: #1A2223;
+            }
+            &:active{
+                color: $gunmetal;
+            }
         }
     }
     .image{
@@ -40,7 +59,7 @@ html {
 }
 
 footer {
-	background-color: $liver;
+	background-color: #20292B;
 	position: fixed;
     text-align: center;
 	left: 0;
@@ -48,8 +67,8 @@ footer {
 	right: 0;
 	width: 100%;
 	padding: 0.5%;
-	// border-top: 2px solid $borderbrown;
-	// box-shadow: 2px 2px $borderbrown;
+	border-top: 2px solid #1A2223;
+	box-shadow: 2px 2px #1A2223;
 	z-index: 900;
     .right{
         margin-left: 5%;

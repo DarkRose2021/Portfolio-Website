@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Image } from "react-bootstrap";
+import { Image } from "react-bootstrap";
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import About from "./About";
 
