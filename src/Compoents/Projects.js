@@ -25,15 +25,25 @@ const Projects = () => {
       "images/CSC260/gameHome.png",
       "images/CSC260/gameCollection.png",
     ],
-			desc: "",
+			desc: "This was for my Dynamic Web class. The repository has the entire .sln, that's how my teacher had us set it up. The two different web pages in the images are from the Madlibs assignment and The Game Library assignment. This was made with ASP.Net",
 			github: "https://github.com/DarkRose2021/CSC260",
+		},
+    {
+			name: "Uno 2.0",
+			imgs: ["images/Uno/uno.png"
+    ],
+			desc: "This was for my OOP (Object Orientated Programming) class. This was my final for the class. I worked on this with one of my classmates. I was redoing Uno from the previous class I had taken. It might still have some bugs in it, I haven't messed with it since I finished that class in my 2nd quarter of my first year. This project was done in Java",
+			github: "https://github.com/DarkRose2021/Uno2.0",
 		},
 		{
 			name: "EventEquinePlanner",
-			imgs: ["images/Event/EmpathyMapTemplate.png",
+			imgs: ["images/Event/What's your problem.png",
+        "images/Event/EmpathyMapTemplate.png",
+        "images/Event/Competitive Analysis Template-1.png",
       "images/Event/Live Wires.png",
+      "images/Event/Question Everything and Everyone.png",
     ],
-			desc: "",
+			desc: "This assignment is for my Projects in User Experience class. Each assignment builds on each other. As of 12/02/2023 I am still working on this assignment. There is no repository for this because there is no coding portion, the class is meant to teach us the process of planning out a project.",
 			github: "",
 		},
 		
@@ -43,7 +53,7 @@ const Projects = () => {
   {projects?.map((project) => (
     <div key={project.name} className="project">
       <Card>
-        {project.name === "Mane Frame Photography" ? (
+        {project.name === "Mane Frame Photography" || project.name === "Uno 2.0" ? (
           <Carousel slide={false} interval={null} keyboard={true} touch={true} indicators={false} controls={false}>
             {project.imgs?.map((img) => (
               <Carousel.Item key={img}>
