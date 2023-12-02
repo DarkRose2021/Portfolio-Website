@@ -1,0 +1,157 @@
+// Styles for 1920x1080 and larger screens
+@media screen and (min-width: 1920px) {
+}
+
+// Styles for 1366x768 and larger screens
+@media screen and (min-width: 1366px) {
+	// Your styles for 1366x768
+}
+
+// Styles for 1440x900 and larger screens
+@media screen and (min-width: 1440px) {
+	// Your styles for 1440x900
+}
+
+// Styles for 1600x900 and larger screens
+@media screen and (min-width: 1600px) {
+	// Your styles for 1600x900
+}
+
+// Styles for 2560x1440 and larger screens
+@media screen and (min-width: 2560px) {
+	// Your styles for 2560x1440
+}
+
+// Styles for other specific screen sizes
+@media screen and (min-width: 1536px) {
+	// Your styles for 1536x864
+}
+
+@media screen and (min-width: 414px) {
+	// Your styles for 414x896
+}
+
+// Mobile styles for screens up to 360x640
+@media screen and (max-width: 360px) {
+	.hero-image {
+		display: block;
+		height: 60vh;
+		img {
+			margin-left: 30%;
+			width: 70vw;
+		}
+		.text {
+			width: 90vw;
+			margin: 2%;
+			button {
+				width: 100%;
+				margin-left: 0.1%;
+				margin-top: 10%;
+			}
+		}
+	}
+
+	.projects {
+		.project {
+			width: 98vw;
+			.card {
+				img {
+					width: 95vw;
+				}
+			}
+		}
+	}
+
+	.college {
+        margin-bottom: 10%;
+        h1{
+            text-align: center;
+            margin-left: 0%;
+            margin-bottom: 1%;
+        }
+		img {
+			width: 70vw;
+			margin-left: 15vw;
+		}
+		div {
+			display: block;
+		}
+        .cText{
+            margin: 2%;
+        }
+	}
+}
+
+// Mobile styles for screens between 360x640 and 414x896
+@media screen and (min-width: 360px) and (max-width: 414px) {
+    .hero-image {
+		display: block;
+		height: 65vh;
+		img {
+			margin-left: 30%;
+			width: 70vw;
+		}
+		.text {
+			width: 90vw;
+			margin: 2%;
+			button {
+				width: 100%;
+				margin-left: 0.1%;
+				margin-top: 10%;
+			}
+		}
+	}
+
+	.projects {
+		.project {
+			width: 98vw;
+			.card {
+				img {
+					width: 95vw;
+				}
+			}
+		}
+	}
+
+	.college {
+        margin-bottom: 10%;
+        h1{
+            text-align: center;
+            margin-left: 0%;
+            margin-bottom: 1%;
+        }
+		img {
+			width: 70vw;
+			margin-left: 15vw;
+		}
+		div {
+			display: block;
+		}
+        .cText{
+            margin: 2%;
+        }
+	}
+}
+
+// Mobile styles for screens between 375x812 and 390x844
+@media screen and (min-height: 844px) {
+	.hero-image{
+        height: 55vh;
+        .text{
+            button{
+            margin-top: 25%;
+        }
+        }
+        
+    }
+}
+
+// Mobile styles for screens between 360x780 and 412x915
+@media screen and (min-width: 360px) and (max-width: 412px) {
+	// Your styles for screens between 360x780 and 412x915
+}
+
+// Mobile styles for screens up to 393x873
+@media screen and (max-width: 393px) {
+	// Your styles for 393x873 and smaller
+}

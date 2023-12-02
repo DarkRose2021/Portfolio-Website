@@ -10,7 +10,6 @@ html {
 	height: 100%;
 }
 
-// .nav{
 .hero-image {
 	@include flexCenter();
 	@include button();
@@ -103,10 +102,11 @@ footer {
 	flex-wrap: wrap;
 	.project {
 		margin-right: 2.5%;
-		width: "20rem";
+		width: 20rem;
 		margin-bottom: 1%;
 		.card {
-			.carousel-control-next:hover, .carousel-control-prev:hover{
+			.carousel-control-next:hover,
+			.carousel-control-prev:hover {
 				background-color: rgba($color: $gunmetal, $alpha: 0.7);
 			}
 			img {
@@ -126,3 +126,18 @@ footer {
 		}
 	}
 }
+
+.scrollBtn {
+	position: "fixed";
+	bottom: "50px";
+	right: "20px";
+	padding: "10px";
+	outline: "none";
+	background-color: "#725752";
+	color: "#e5e5e5";
+	border: "none";
+	cursor: "pointer";
+	border-radius: "5px";
+}
+
+@import "./media.scss";

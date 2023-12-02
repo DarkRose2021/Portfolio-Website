@@ -25,20 +25,12 @@ const ScrollToTopButton = () => {
 
 	return (
 		<button
+		
 			onClick={scrollToTop}
 			style={{
 				display: isVisible ? "block" : "none",
-				position: "fixed",
-				bottom: "50px",
-				right: "20px",
-				padding: "10px",
-				outline: "none",
-				background: "#725752",
-				color: "#e5e5e5",
-				border: "none",
-				cursor: "pointer",
-				borderRadius: "5px",
 			}}
+			className="scrollBtn"
 		>
 			Scroll to Top <i class="bi bi-arrow-up-square-fill"></i>
 		</button>
