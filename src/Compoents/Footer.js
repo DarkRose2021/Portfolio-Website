@@ -17,7 +17,7 @@ const Footer = () => {
 						<b className="right">
             &copy; Kathrine King 2023
 						</b>
-					
+					 
 				</div>
 			</footer>
   )

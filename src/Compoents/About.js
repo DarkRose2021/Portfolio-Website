@@ -14,7 +14,7 @@ const About = () => {
 				<a href="mailto:katiek2128@gmail.com" target = "_blank" rel="noreferrer" className="icons"><i class="bi bi-envelope-fill"></i></a>
 			</h3>
       {/* <div> */}
-			<a href = {Pdf} target = "_blank"><Button>Resume</Button></a>
+			<a href = {Pdf} target = "_blank" rel="noreferrer"><Button>Resume</Button></a>
       {/* </div> */}
 		</div>
 	);

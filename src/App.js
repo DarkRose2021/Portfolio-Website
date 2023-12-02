@@ -4,6 +4,7 @@ import Contact from './Compoents/Contact';
 import Footer from './Compoents/Footer';
 import Nav from './Compoents/Nav';
 import Projects from './Compoents/Projects';
+import ScrollToTopButton from './Compoents/ScrollToTopButton';
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
       <Projects />
 
       <College />
-
+      <ScrollToTopButton />
       <Footer />
     </div>
   );

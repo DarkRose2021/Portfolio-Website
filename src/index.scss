@@ -1,9 +1,9 @@
 //vars
-$gunmetal: #273134ff;
-$liver: #725752ff;
-$blue: #7ab4a8ff;
-$purple: #cbb3bfff;
-$yellow: #fef6c9ff;
+$gunmetal: #273134;
+$liver: #725752;
+$blue: #7ab4a8;
+$purple: #B99AC4;
+$yellow: #efe5ac;
 $color: #e5e5e5;
 
 //import
@@ -16,6 +16,12 @@ $color: #e5e5e5;
 	justify-content: center;
 }
 
+@mixin flexBetween {
+	display: flex;
+	align-content: space-between;
+	justify-content: space-between;
+}
+
 @mixin borderRadius {
 	border-radius: 5px;
 }
@@ -26,9 +32,11 @@ $color: #e5e5e5;
 
 @mixin button {
 	button {
-		background-color: $blue;
+		background-color: $liver;
+		color: $color;
 		border: none;
 		padding: 1% 2%;
+		cursor: "pointer";
 		margin: 2%;
 		@include borderRadius();
 	}
