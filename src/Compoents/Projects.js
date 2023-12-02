@@ -6,7 +6,7 @@ const Projects = () => {
 		{
 			name: "Mane Frame Photography",
 			imgs: ["images/ManeFrame/homepage.png"],
-			desc: "This was my Capstone project. I started this March 2023 and I'm still working on it, I want to get this website to be as much like an actual website as possible. This project was made in Reactjs, with an Express backend and MongoDB as the database. I took this class in the 4th quarter of my 2nd year",
+			desc: "This was my Capstone project. I started this March 2023 and I'm still working on it. I want to get this website to be as much like an actual website as possible. This project was made in Reactjs, with an Express backend and MongoDB as the database. I took this class in the 4th quarter of my 2nd year",
 			github: "https://github.com/DarkRose2021/Capstone",
 		},
 		{

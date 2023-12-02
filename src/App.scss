@@ -105,6 +105,8 @@ footer {
 		width: '20rem';
 		margin-bottom: 1%;
 		.card {
+			background-color: #20292b;
+			height: 100%;
 			.carousel-control-next:hover,
 			.carousel-control-prev:hover {
 				background-color: rgba($color: $gunmetal, $alpha: 0.7);
