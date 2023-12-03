@@ -6,8 +6,15 @@ const Projects = () => {
 		{
 			name: "Mane Frame Photography",
 			imgs: ["images/ManeFrame/homepage.png"],
-			desc: "This was my Capstone project. I started this March 2023 and I'm still working on it. I want to get this website to be as much like an actual website as possible. This project was made in Reactjs, with an Express backend and MongoDB as the database. I took this class in the 4th quarter of my 2nd year",
+			desc: "This was my Capstone project. I started this March 2023 and I'm still working on it. I want to get this website to be as much like an actual website as possible. I took this class in the 4th quarter of my 2nd year",
 			github: "https://github.com/DarkRose2021/Capstone",
+			icons: [
+				"images/reactjs-icon.svg",
+				"images/getbootstrap-icon.svg",
+				"images/mongodb-icon.svg",
+				"images/nodejs-icon.svg",
+				"images/sass-lang-icon.svg",
+			],
 		},
 		{
 			name: "Recipe Finder",
@@ -19,6 +26,11 @@ const Projects = () => {
 			],
 			desc: "I made this for my Front-End Implementation class. I was supposed to find an api and make a useful website with it. I chose to use a recipe api. This was made in Angular and the api was from ",
 			github: "https://github.com/DarkRose2021/Recipe-Finder",
+			icons: [
+				"images/angular-icon.svg",
+				"images/getbootstrap-icon.svg",
+				"images/sass-lang-icon.svg",
+			],
 		},
 		{
 			name: "CSC260 Assignments",
@@ -30,12 +42,14 @@ const Projects = () => {
 			],
 			desc: "This was for my Dynamic Web class. The repository has the entire .sln, that's how my teacher had us set it up. The two different web pages in the images are from the Madlibs assignment and The Game Library assignment. This was made with ASP.Net",
 			github: "https://github.com/DarkRose2021/CSC260",
+			icons: ["images/dotnet-vertical.svg", "images/getbootstrap-icon.svg"],
 		},
 		{
 			name: "Uno 2.0",
 			imgs: ["images/Uno/uno.png"],
 			desc: "This was for my OOP (Object Orientated Programming) class. This was my final for the class. I worked on this with one of my classmates. I was redoing Uno from the previous class I had taken. It might still have some bugs in it, I haven't messed with it since I finished that class in my 2nd quarter of my first year. This project was done in Java",
 			github: "https://github.com/DarkRose2021/Uno2.0",
+			icons: ["images/java-vertical.svg", "images/IntelliJ IDEA.svg"],
 		},
 		{
 			name: "EventEquinePlanner",
@@ -111,6 +125,27 @@ const Projects = () => {
 										<></>
 									)}
 								</Card.Text>
+								<div className="centerIcons">
+									{project.icons?.map((icon) => (
+										<Image
+											src={icon}
+											rounded
+											className={
+												project.name === "Mane Frame Photography"
+													? "icons manyIcons"
+													: "icons"
+											}
+											style={{
+												background:
+													icon === "images/dotnet-vertical.svg"
+														? "#e5e5e5"
+														: "none",
+												width:
+												icon === "images/IntelliJ IDEA.svg" ? "35%" : ""
+											}}
+										/>
+									))}
+								</div>
 								{project.name === "EventEquinePlanner" ? (
 									<></>
 								) : (

@@ -2,12 +2,22 @@
 @import "node_modules/bootstrap/scss/bootstrap";
 
 body {
+	font-family: 'Playfair Display', serif;
 	background-color: $gunmetal;
 	color: $color;
 }
+
+h2, h3, h4, h5, h6{
+	font-family: 'Playfair Display', serif;
+}
+
 body,
 html {
 	height: 100%;
+}
+
+h1{
+	font-family: 'Satisfy', cursive;
 }
 
 .hero-image {
@@ -131,6 +141,17 @@ center {
 				word-wrap: normal;
 				max-width: 500px;
 			}
+			.centerIcons{
+				@include flexCenter();
+				.icons{
+					width: 15%;
+					margin: 7%;
+				}
+				.manyIcons{
+					margin: 3%;
+				}
+			}
+			
 		}
 	}
 }
