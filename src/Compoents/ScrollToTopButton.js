@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 
 const ScrollToTopButton = () => {
 	const [isVisible, setIsVisible] = useState(false);
+	const [isMobile, setIsMobile] = useState(false);
 
 	const handleScroll = () => {
 		const scrolled = document.documentElement.scrollTop;
@@ -15,33 +16,41 @@ const ScrollToTopButton = () => {
 		});
 	};
 
+	const checkIsMobile = () => {
+		setIsMobile(window.innerWidth <= 809);
+	};
+
 	useEffect(() => {
 		window.addEventListener("scroll", handleScroll);
+		checkIsMobile();
+		window.addEventListener("resize", checkIsMobile);
 
 		return () => {
 			window.removeEventListener("scroll", handleScroll);
+			window.removeEventListener("resize", checkIsMobile);
 		};
 	}, []);
 
 	return (
-		<button
-			onClick={scrollToTop}
-			style={{
-				display: isVisible ? "block" : "none",
-				position: "fixed",
-				bottom: "50px",
-				right: "20px",
-				padding: "10px",
-				outline: "none",
-				background: "#725752",
-				color: "#e5e5e5",
-				border: "none",
-				cursor: "pointer",
-				borderRadius: "5px",
-			}}
-		>
-			Scroll to Top <i class="bi bi-arrow-up-square-fill"></i>
-		</button>
+		<>
+			<button
+				onClick={scrollToTop}
+				className="scrollBtn"
+				style={{
+					display: isVisible && !isMobile ? "block" : "none",
+				}}
+			>
+				Scroll to Top <i class="bi bi-arrow-up-square-fill"></i>
+			</button>
+
+			<i
+				onClick={scrollToTop}
+				class="bi bi-arrow-up-square-fill scrollBtnMobile"
+				style={{
+					display: isVisible && isMobile ? "block" : "none",
+				}}
+			></i>
+		</>
 	);
 };
 

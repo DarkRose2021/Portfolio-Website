@@ -20,6 +20,7 @@ html {
 	background-repeat: no-repeat;
 	background-size: cover;
 	position: relative;
+	border-bottom: 5px #1a2223 solid;
 	.text {
 		@include borderRadiusContainers();
 		background-color: rgba($color: $blue, $alpha: 0.7);
@@ -39,6 +40,7 @@ html {
 
 		.icons {
 			color: $gunmetal;
+			font-size: 30px;
 			&:hover {
 				color: #1a2223;
 			}
@@ -51,7 +53,7 @@ html {
 		margin-left: -20%;
 		margin-top: 1.5%;
 		img {
-			max-height: 45vh;
+			width: 45vw;
 			position: left;
 		}
 	}
@@ -95,6 +97,11 @@ footer {
 	}
 }
 
+center {
+	color: $blue;
+	margin-top: 1%;
+}
+
 .projects {
 	margin: 2% 1%;
 	@include button;
@@ -102,7 +109,6 @@ footer {
 	flex-wrap: wrap;
 	.project {
 		margin-right: 2.5%;
-		width: '20rem';
 		margin-bottom: 1%;
 		.card {
 			background-color: #20292b;
@@ -130,16 +136,37 @@ footer {
 }
 
 .scrollBtn {
-	position: "fixed";
-	bottom: "50px";
-	right: "20px";
-	padding: "10px";
-	outline: "none";
-	background-color: "#725752";
-	color: "#e5e5e5";
-	border: "none";
-	cursor: "pointer";
-	border-radius: "5px";
+	position: fixed;
+	bottom: 50px;
+	right: 20px;
+	padding: 10px;
+	outline: none;
+	background-color: $liver;
+	color: $color;
+	border: none;
+	cursor: pointer;
+	border-radius: 5px;
+	z-index: 100;
+	&:hover {
+		background-color: $blue;
+		color: $gunmetal;
+	}
+}
+
+.scrollBtnMobile {
+	position: fixed;
+	bottom: 50px;
+	right: 13px;
+	// padding: 10px;
+	outline: none;
+	color: $liver;
+	border: none;
+	cursor: pointer;
+	border-radius: 5px;
+	font-size: 30px;
+	&:hover {
+		color: $blue;
+	}
 }
 
 @import "./media.scss";
