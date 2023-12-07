@@ -13,10 +13,10 @@ function App() {
 			<Nav />
 
 			<Contact />
-
+			<College />
 			<Projects />
 
-			<College />
+			
 			<ScrollToTopButton />
 			<Footer />
 			<Analytics />
