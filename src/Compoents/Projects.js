@@ -52,6 +52,13 @@ const Projects = () => {
 			icons: ["images/icons/java-vertical.svg", "images/icons/IntelliJ IDEA.svg"],
 		},
 		{
+			name: "React Uno",
+			imgs: ["images/ReactUno/all.png"],
+			desc: "This was for my Software in existing code ans software class. I worked in a group with Harela Johnston. We took an Uno project from Github that was HTML, CSS, and Javascript and turned it into a React.js app. The image on top is what it used to look like and the bottom is how we changed the styling. This is still a work in progress",
+			github: "https://github.com/HarleaJohnston/React_Uno/tree/React-Uno",
+			icons: ["images/icons/reactjs-icon.svg", "images/icons/sass-lang-icon.svg","images/icons/getbootstrap-icon.svg",],
+		},
+		{
 			name: "EventEquinePlanner",
 			imgs: [
 				"images/Event/What's your problem.png",
@@ -74,7 +81,7 @@ const Projects = () => {
 					<div key={project.name} className="project">
 						<Card>
 							{project.name === "Mane Frame Photography" ||
-							project.name === "Uno 2.0" ? (
+							project.name === "Uno 2.0" || project.name === "React Uno" ? (
 								<Carousel
 									slide={false}
 									interval={null}

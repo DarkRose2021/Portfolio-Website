@@ -18,6 +18,7 @@ html {
 
 h1{
 	font-family: 'Satisfy', cursive;
+	font-size: 3em;
 }
 
 .hero-image {
@@ -38,7 +39,7 @@ h1{
 		margin-top: 8%;
 		text-align: center;
 		color: $gunmetal;
-		max-height: 35%;
+		max-height: 40%;
 		padding: 1%;
 
 		button {
@@ -115,6 +116,7 @@ center {
 
 .projects {
 	margin: 2% 1%;
+	margin-bottom: 5%;
 	@include button;
 	@include flexBetween;
 	flex-wrap: wrap;
@@ -189,6 +191,26 @@ center {
 	&:hover {
 		color: $blue;
 	}
+}
+
+.centerChart{
+	color: $gunmetal;
+	@include flexCenter;
+	margin-bottom: 10%;
+	.chart-container{
+		h1{
+			color: $purple;
+			text-align: center;
+		}
+		.x{
+			color: $color
+		}
+	}
+}
+
+.recharts-text{
+	color: $color;
+	background-color: hotpink
 }
 
 @import "./media.scss";
