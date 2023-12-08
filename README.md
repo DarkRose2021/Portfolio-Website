@@ -6,6 +6,7 @@ I made this with Reactjs, Nodejs, Sass, Bootstrap
 
 # Future Roadmap
     [] Add projects as I see fit
+    [] Make it more dynamic
 
 # How to run the project
 If you want to run this on your computer then:
