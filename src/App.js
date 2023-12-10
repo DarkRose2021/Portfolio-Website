@@ -5,14 +5,14 @@ import Nav from "./Compoents/Nav";
 import Projects from "./Compoents/Projects";
 import ScrollToTopButton from "./Compoents/ScrollToTopButton";
 import { Analytics } from "@vercel/analytics/react";
-import Skills from "./Compoents/Skills";
+// import Skills from "./Compoents/Skills";
 
 function App() {
 	return (
 		<div>
 			<Nav />
 			<College />
-			<Skills />
+			{/* <Skills /> */}
 			<Projects />
 			<ScrollToTopButton />
 			<Footer />
