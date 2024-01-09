@@ -5,6 +5,7 @@ This website is a simple portfolio website to better show off my skills.
 I made this with Reactjs, Nodejs, Sass, Bootstrap
 
 # Future Roadmap
+    [] Add Skills chart
     [] Add projects as I see fit
     [] Make it more dynamic
 
