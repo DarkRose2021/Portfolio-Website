@@ -66,9 +66,11 @@ const Projects = () => {
 				"images/Event/Competitive Analysis Template-1.png",
 				"images/Event/Live Wires.png",
 				"images/Event/Question Everything and Everyone.png",
+				"images/Event/Make It All Work.png",
 			],
 			desc: "This assignment is for my Projects in User Experience class. Each assignment builds on each other. As of 12/02/2023 I am still working on this assignment. There is no repository for this because there is no coding portion, the class is meant to teach us the process of planning out a project.",
 			github: "",
+			icons: ["images/icons/adobe-illustrator-svgrepo-com.svg", "images/icons/adobe-photoshop-svgrepo-com.svg", "images/icons/adobe-xd-svgrepo-com.svg", "images/icons/word-svgrepo-com.svg"],
 		},
 	];
 	return (
