@@ -194,6 +194,7 @@ center {
 }
 
 .centerChart{
+	background-color: #232D2F;
 	color: $gunmetal;
 	@include flexCenter;
 	margin-bottom: 10%;
@@ -210,7 +211,11 @@ center {
 
 .recharts-text{
 	color: $color;
-	background-color: hotpink
+	background-color: hotpink !important;
+}
+
+tspan{
+	color: hotpink;
 }
 
 @import "./media.scss";
