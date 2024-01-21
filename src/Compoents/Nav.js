@@ -7,7 +7,7 @@ const Nav = () => {
 	return (
 		<div className="hero-image">
 			<div className="image">
-				<Image src="/images/AboutMe.jpg" alt="person with horse" rounded />
+				<Image src="/images/2020-06-09_11-45-53_830.jpg" alt="person with horse" rounded />
 			</div>
 			<div className="text">
 				<About />
