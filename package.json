@@ -17,6 +17,7 @@
     "recharts": "^2.10.3",
     "sass": "^1.69.5",
     "scss": "^0.2.4",
+    "victory": "^36.8.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

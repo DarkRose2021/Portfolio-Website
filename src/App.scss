@@ -234,15 +234,15 @@ center {
 			color: $purple;
 			text-align: center;
 		}
+		h4{
+			color: $purple;
+			text-align: center;
+		}
+	}
 		.x {
 			color: $color;
 		}
 	}
-}
-
-.recharts-text {
-	color: $color;
-	background-color: hotpink;
 }
 
 @import "./media.scss";
