@@ -5,7 +5,7 @@ const Projects = () => {
 	const [selectedImage, setSelectedImage] = useState(null);
 
 	const ImageModal = ({ show, onHide, img }) => (
-		<Modal show={show} onHide={onHide}>
+		<Modal show={show} onHide={onHide} size="xl" animation>
 			<Modal.Body>
 				<Image src={img} fluid />
 			</Modal.Body>
@@ -99,7 +99,7 @@ const Projects = () => {
 		},
 	];
 	return (
-		<div>
+		<div className="allProjects">
 			<center>
 				<h1>Projects</h1>
 			</center>
@@ -112,15 +112,16 @@ const Projects = () => {
 								interval={null}
 								keyboard={true}
 								touch={true}
-								indicators={false}
-								controls={false}
+								indicators={true}
+								controls={true}
+								
 							>
 								{project.imgs?.map((img, index) => (
-									<Carousel.Item
-										key={img}
-										onClick={() => setSelectedImage({ projectIndex, index })}
-									>
-										<Image src={img} />
+									<Carousel.Item key={img}>
+										<Image
+											src={img}
+											onClick={() => setSelectedImage({ projectIndex, index: 0 })} // Add onClick to Carousel
+										/>
 									</Carousel.Item>
 								))}
 							</Carousel>

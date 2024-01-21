@@ -2,13 +2,17 @@
 @import "node_modules/bootstrap/scss/bootstrap";
 
 body {
-	font-family: 'Playfair Display', serif;
+	font-family: "Playfair Display", serif;
 	background-color: $gunmetal;
 	color: $color;
 }
 
-h2, h3, h4, h5, h6{
-	font-family: 'Playfair Display', serif;
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Playfair Display", serif;
 }
 
 body,
@@ -16,8 +20,8 @@ html {
 	height: 100%;
 }
 
-h1{
-	font-family: 'Satisfy', cursive;
+h1 {
+	font-family: "Satisfy", cursive;
 	font-size: 3em;
 }
 
@@ -132,6 +136,10 @@ center {
 			}
 			img {
 				width: 500px;
+				&:hover{
+					cursor: pointer;
+					
+				}
 			}
 			border: 5px solid #1a2223;
 			border-radius: 10px;
@@ -144,17 +152,16 @@ center {
 				word-wrap: normal;
 				max-width: 500px;
 			}
-			.centerIcons{
+			.centerIcons {
 				@include flexCenter();
-				.icons{
+				.icons {
 					width: 15%;
 					margin: 7%;
 				}
-				.manyIcons{
+				.manyIcons {
 					margin: 3%;
 				}
 			}
-			
 		}
 	}
 }
@@ -193,24 +200,24 @@ center {
 	}
 }
 
-.centerChart{
+.centerChart {
 	color: $gunmetal;
 	@include flexCenter;
 	margin-bottom: 10%;
-	.chart-container{
-		h1{
+	.chart-container {
+		h1 {
 			color: $purple;
 			text-align: center;
 		}
-		.x{
-			color: $color
+		.x {
+			color: $color;
 		}
 	}
 }
 
-.recharts-text{
+.recharts-text {
 	color: $color;
-	background-color: hotpink
+	background-color: hotpink;
 }
 
 @import "./media.scss";
