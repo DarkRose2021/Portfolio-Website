@@ -9,11 +9,11 @@ export const pieData = [
 ];
 
 export const data = [
-	{ x: 1, y: 2, fill: "#D7494B" },
-	{ x: 2, y: 3, fill: "#F3722C" },
-	{ x: 3, y: 4, fill: "#F9C74F" },
-	{ x: 4, y: 5, fill: "#90BE6D" },
-	{ x: 5, y: 8, fill: "#43AA8B" },
-	{ x: 6, y: 10, fill: "#577590" },
-	{ x: 7, y: 10, fill: "#6D549F" },
+	{ x: 1, y: 1, fill: "#D7494B" },
+	{ x: 2, y: 2, fill: "#F3722C" },
+	{ x: 3, y: 3, fill: "#F9C74F" },
+	{ x: 4, y: 4, fill: "#90BE6D" },
+	{ x: 5, y: 4, fill: "#43AA8B" },
+	{ x: 6, y: 5, fill: "#577590" },
+	{ x: 7, y: 5, fill: "#6D549F" },
 ];

@@ -5,6 +5,7 @@ import {
 	VictoryTheme,
 	VictoryChart,
 	VictoryAxis,
+	VictoryLabel
 } from "victory";
 import { data, pieData } from "./GraphData";
 
@@ -55,24 +56,40 @@ const Skills = () => {
 							domainPadding={{ x: 35 }}
 						>
 							<VictoryAxis
-								style={{
-									tickLabels: {
-										fontSize: 20,
-										fill: "#e5e5e5",
-										padding: 5,
-									},
-								}}
-								tickValues={[1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0]}
-								tickFormat={[
-									"Java",
-									"Python",
-									"Angular",
-									"React.js",
-									"JavaScript",
-									"HTML",
-									"CSS/SCSS",
-								]}
-							/>
+  dependentAxis
+  style={{
+    ticks: { stroke: "transparent" },
+    tickLabels: {
+      fontSize: 12,
+      fill: "#e5e5e5",
+      paddingLeft: 4000, // Increase left padding to avoid cutoff
+    },
+  }}
+  tickValues={[1.0, 2.0, 3.0, 4.0, 5.0]}
+  tickFormat={["Very Low", "Low", "Normal", "High", "Very High"]}
+  tickLabelComponent={<VictoryLabel angle={-45} />}
+/>
+
+<VictoryAxis
+  style={{
+    ticks: { stroke: "transparent" },
+    tickLabels: {
+      fontSize: 20,
+      fill: "#e5e5e5",
+      padding: 5,
+    },
+  }}
+  tickValues={[1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0]}
+  tickFormat={[
+    "Java",
+    "Python",
+    "Angular",
+    "React.js",
+    "JavaScript",
+    "HTML",
+    "CSS/SCSS",
+  ]}
+/>
 
 							<VictoryBar
 								barWidth={70}
