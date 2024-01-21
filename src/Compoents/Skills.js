@@ -1,6 +1,5 @@
 import React from "react";
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip } from "recharts";
-
+import { VictoryPie } from "victory";
 import { data } from "./GraphData";
 
 const Skills = () => {
@@ -9,23 +8,17 @@ const Skills = () => {
 			<div className="chart-container">
 				<h1>Skills</h1>
 				<div>
-					<BarChart
-						width={1000}
-						height={500}
+					<VictoryPie
+						colorScale={["#D7494B", "#F3722C", "#F9C74F", "#90BE6D", "#43AA8B", "#577590", "#6D549F"]}
 						data={data}
-						margin={{
-							top: 5,
-							right: 30,
-							left: 20,
-							bottom: 5,
+						width={500}
+						style={{
+							labels: {
+								fontSize: 20,
+								fill: "#e5e5e5",
+							},
 						}}
-					>
-						<CartesianGrid strokeDasharray="3 3" />
-						<XAxis dataKey="name" />
-						<YAxis />
-						<Tooltip />
-						<Bar dataKey="level" fill="#B99AC4" />
-					</BarChart>
+					/>
 				</div>
 			</div>
 		</div>

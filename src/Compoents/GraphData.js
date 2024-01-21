@@ -1,42 +1,9 @@
 export const data = [
-	{
-		name: "React.js",
-		level: 6,
-		amt: 6,
-	},
-	{
-		name: "SCSS",
-		level: 7,
-		amt: 7,
-	},
-	{
-		name: "JavaScript",
-		level: 8,
-		amt: 8,
-	},
-	{
-		name: "Angular",
-		level: 4,
-		amt: 4,
-	},
-	{
-		name: "Java",
-		level: 3,
-		amt: 3,
-	},
-	{
-		name: "Python",
-		level: 4,
-		amt: 4,
-	},
-	{
-		name: "HTML",
-		level: 10,
-		amt: 10,
-	},
-	{
-		name: "CSS",
-		level: 10,
-		amt: 10,
-	},
+	{ x: 1, y: 2, label: "Java" },
+	{ x: 2, y: 3, label: "Python" },
+	{ x: 4, y: 5, label: "Angular" },
+	{ x: 6, y: 7, label: "React.js" },
+	{ x: 8, y: 9, label: "JavaScript" },
+	{ x: 9, y: 10, label: "HTML" },
+	{ x: 10, y: 11, label: "CSS/SCSS" },
 ];
