@@ -107,24 +107,33 @@ const Projects = () => {
 				{projects?.map((project, projectIndex) => (
 					<div key={project.name} className="project">
 						<Card>
-							<Carousel
-								slide={false}
-								interval={null}
-								keyboard={true}
-								touch={true}
-								indicators={true}
-								controls={true}
-								
-							>
-								{project.imgs?.map((img, index) => (
-									<Carousel.Item key={img}>
-										<Image
-											src={img}
-											onClick={() => setSelectedImage({ projectIndex, index: 0 })} // Add onClick to Carousel
-										/>
-									</Carousel.Item>
-								))}
-							</Carousel>
+							{project.name === "Mane Frame Photography" ||
+							project.name === "Uno 2.0" || project.name === "React Uno" ? (
+								<Carousel
+									slide={false}
+									interval={null}
+									keyboard={true}
+									touch={true}
+									indicators={false}
+									controls={false}
+								>
+									{project.imgs?.map((img, index) => (
+										<Carousel.Item key={img}>
+											<Image src={img} />
+											<div className="overlay"onClick={() => setSelectedImage({ projectIndex, index: index })}></div>
+										</Carousel.Item>
+									))}
+								</Carousel>
+							) : (
+								<Carousel slide={false} interval={null} keyboard={true}>
+									{project.imgs?.map((img, index) => (
+										<Carousel.Item key={img}>
+											<Image src={img} />
+											<div className="overlay"onClick={() => setSelectedImage({ projectIndex, index: index })}></div>
+										</Carousel.Item>
+									))}
+								</Carousel>
+							)}
 							<Card.Body>
 								<Card.Title>{project.name}</Card.Title>
 								<Card.Text>
@@ -168,9 +177,7 @@ const Projects = () => {
 														? "#e5e5e5"
 														: "none",
 												width:
-													icon === "images/icons/IntelliJ IDEA.svg"
-														? "35%"
-														: "",
+												icon === "images/icons/IntelliJ IDEA.svg" ? "35%" : ""
 											}}
 										/>
 									))}
