@@ -157,9 +157,8 @@ center {
 			}
 			img {
 				width: 500px;
-				&:hover{
+				&:hover {
 					cursor: pointer;
-					
 				}
 			}
 			border: 5px solid #1a2223;
@@ -187,7 +186,7 @@ center {
 	}
 }
 
-.modal-content{
+.modal-content {
 	background-color: #20292b;
 }
 
@@ -234,13 +233,9 @@ center {
 			color: $purple;
 			text-align: center;
 		}
-		h4{
+		h4 {
 			color: $purple;
 			text-align: center;
-		}
-	}
-		.x {
-			color: $color;
 		}
 	}
 }
