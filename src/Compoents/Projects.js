@@ -1,7 +1,17 @@
-import React from "react";
-import { Card, Button, Carousel, Image } from "react-bootstrap";
+import React, { useState } from "react";
+import { Card, Button, Carousel, Image, Modal } from "react-bootstrap";
 
 const Projects = () => {
+	const [selectedImage, setSelectedImage] = useState(null);
+
+	const ImageModal = ({ show, onHide, img }) => (
+		<Modal show={show} onHide={onHide} size="xl" animation>
+			<Modal.Body>
+				<Image src={img} fluid />
+			</Modal.Body>
+		</Modal>
+	);
+
 	const projects = [
 		{
 			name: "Mane Frame Photography",
@@ -42,21 +52,31 @@ const Projects = () => {
 			],
 			desc: "This was for my Dynamic Web class. The repository has the entire .sln, that's how my teacher had us set it up. The two different web pages in the images are from the Madlibs assignment and The Game Library assignment. This was made with ASP.Net",
 			github: "https://github.com/DarkRose2021/CSC260",
-			icons: ["images/icons/dotnet-vertical.svg", "images/icons/getbootstrap-icon.svg"],
+			icons: [
+				"images/icons/dotnet-vertical.svg",
+				"images/icons/getbootstrap-icon.svg",
+			],
 		},
 		{
 			name: "Uno 2.0",
 			imgs: ["images/Uno/uno.png"],
 			desc: "This was for my OOP (Object Orientated Programming) class. This was my final for the class. I worked on this with one of my classmates. I was redoing Uno from the previous class I had taken. It might still have some bugs in it, I haven't messed with it since I finished that class in my 2nd quarter of my first year. This project was done in Java",
 			github: "https://github.com/DarkRose2021/Uno2.0",
-			icons: ["images/icons/java-vertical.svg", "images/icons/IntelliJ IDEA.svg"],
+			icons: [
+				"images/icons/java-vertical.svg",
+				"images/icons/IntelliJ IDEA.svg",
+			],
 		},
 		{
 			name: "React Uno",
 			imgs: ["images/ReactUno/all.png"],
 			desc: "This was for my Software in existing code ans software class. I worked in a group with Harela Johnston. We took an Uno project from Github that was HTML, CSS, and Javascript and turned it into a React.js app. The image on top is what it used to look like and the bottom is how we changed the styling. This is still a work in progress",
 			github: "https://github.com/HarleaJohnston/React_Uno/tree/React-Uno",
-			icons: ["images/icons/reactjs-icon.svg", "images/icons/sass-lang-icon.svg","images/icons/getbootstrap-icon.svg",],
+			icons: [
+				"images/icons/reactjs-icon.svg",
+				"images/icons/sass-lang-icon.svg",
+				"images/icons/getbootstrap-icon.svg",
+			],
 		},
 		{
 			name: "EventEquinePlanner",
@@ -70,16 +90,21 @@ const Projects = () => {
 			],
 			desc: "This assignment is for my Projects in User Experience class. Each assignment builds on each other. As of 12/02/2023 I am still working on this assignment. There is no repository for this because there is no coding portion, the class is meant to teach us the process of planning out a project.",
 			github: "",
-			icons: ["images/icons/adobe-illustrator-svgrepo-com.svg", "images/icons/adobe-photoshop-svgrepo-com.svg", "images/icons/adobe-xd-svgrepo-com.svg", "images/icons/word-svgrepo-com.svg"],
+			icons: [
+				"images/icons/adobe-illustrator-svgrepo-com.svg",
+				"images/icons/adobe-photoshop-svgrepo-com.svg",
+				"images/icons/adobe-xd-svgrepo-com.svg",
+				"images/icons/word-svgrepo-com.svg",
+			],
 		},
 	];
 	return (
-		<div>
+		<div className="allProjects">
 			<center>
 				<h1>Projects</h1>
 			</center>
 			<div className="projects">
-				{projects?.map((project) => (
+				{projects?.map((project, projectIndex) => (
 					<div key={project.name} className="project">
 						<Card>
 							{project.name === "Mane Frame Photography" ||
@@ -92,17 +117,19 @@ const Projects = () => {
 									indicators={false}
 									controls={false}
 								>
-									{project.imgs?.map((img) => (
+									{project.imgs?.map((img, index) => (
 										<Carousel.Item key={img}>
 											<Image src={img} />
+											<div className="overlay"onClick={() => setSelectedImage({ projectIndex, index: index })}></div>
 										</Carousel.Item>
 									))}
 								</Carousel>
 							) : (
 								<Carousel slide={false} interval={null} keyboard={true}>
-									{project.imgs?.map((img) => (
+									{project.imgs?.map((img, index) => (
 										<Carousel.Item key={img}>
 											<Image src={img} />
+											<div className="overlay"onClick={() => setSelectedImage({ projectIndex, index: index })}></div>
 										</Carousel.Item>
 									))}
 								</Carousel>
@@ -167,6 +194,17 @@ const Projects = () => {
 					</div>
 				))}
 			</div>
+			<ImageModal
+				show={selectedImage !== null}
+				onHide={() => setSelectedImage(null)}
+				img={
+					selectedImage !== null &&
+					projects[selectedImage.projectIndex] &&
+					projects[selectedImage.projectIndex].imgs
+						? projects[selectedImage.projectIndex].imgs[selectedImage.index]
+						: null
+				}
+			/>
 		</div>
 	);
 };

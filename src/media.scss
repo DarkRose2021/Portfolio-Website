@@ -42,6 +42,12 @@
 }
 
 @media screen and (min-width: 550px) and (max-width: 809px) {
+	.college{
+		.cImage{
+			width: 80%;
+		}
+	}
+
 	.hero-image {
         height: 35vh;
 		button {
