@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import {
 	VictoryPie,
 	VictoryBar,
 	VictoryTheme,
 	VictoryChart,
 	VictoryAxis,
-	VictoryLabel
+	VictoryLabel,
 } from "victory";
 import { data, pieData } from "./GraphData";
 
@@ -51,45 +51,45 @@ const Skills = () => {
 						/>
 					) : (
 						<VictoryChart
-							width={1000}
 							theme={VictoryTheme.material}
 							domainPadding={{ x: 35 }}
+							width={1000}
+							padding={{ left: 90, top: 0, right: 20, bottom: 33 }}
 						>
 							<VictoryAxis
-  dependentAxis
-  style={{
-    ticks: { stroke: "transparent" },
-    tickLabels: {
-      fontSize: 12,
-      fill: "#e5e5e5",
-      paddingLeft: 4000, // Increase left padding to avoid cutoff
-    },
-  }}
-  tickValues={[1.0, 2.0, 3.0, 4.0, 5.0]}
-  tickFormat={["Very Low", "Low", "Normal", "High", "Very High"]}
-  tickLabelComponent={<VictoryLabel angle={-45} />}
-/>
+								dependentAxis
+								style={{
+									ticks: { stroke: "transparent" },
+									tickLabels: {
+										fontSize: 20,
+										fill: "#e5e5e5",
+									},
+								}}
+								tickValues={[1.0, 2.0, 3.0, 4.0, 5.0]}
+								tickFormat={["Very Low", "Low", "Normal", "High", "Very High"]}
+								tickLabelComponent={<VictoryLabel angle={-40} />}
+							/>
 
-<VictoryAxis
-  style={{
-    ticks: { stroke: "transparent" },
-    tickLabels: {
-      fontSize: 20,
-      fill: "#e5e5e5",
-      padding: 5,
-    },
-  }}
-  tickValues={[1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0]}
-  tickFormat={[
-    "Java",
-    "Python",
-    "Angular",
-    "React.js",
-    "JavaScript",
-    "HTML",
-    "CSS/SCSS",
-  ]}
-/>
+							<VictoryAxis
+								style={{
+									ticks: { stroke: "transparent" },
+									tickLabels: {
+										fontSize: 20,
+										fill: "#e5e5e5",
+										padding: 5,
+									},
+								}}
+								tickValues={[1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0]}
+								tickFormat={[
+									"Java",
+									"Python",
+									"Angular",
+									"React.js",
+									"JavaScript",
+									"HTML",
+									"CSS/SCSS",
+								]}
+							/>
 
 							<VictoryBar
 								barWidth={70}
