@@ -48,12 +48,6 @@
 		}
 	}
 
-	.text {
-		button {
-			margin-top: 10%;
-		}
-	}
-
 	.hero-image {
 		height: 35vh;
 		button {
@@ -103,14 +97,14 @@
 			font-size: 1em;
 		}
 	}
-}
-.text {
-	width: 90vw;
-	margin: 2%;
-	button {
-		width: 100%;
-		margin-left: 0.1%;
-		margin-top: 15%;
+	.text {
+		width: 90vw;
+		margin: 2%;
+		button {
+			width: 100%;
+			margin-left: 0.1%;
+			margin-top: 15%;
+		}
 	}
 }
 

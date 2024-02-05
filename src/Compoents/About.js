@@ -5,7 +5,7 @@ import Pdf from "../Resume.pdf";
 
 const About = () => {
 	return (
-		<div className="text">
+		<div>
 			<h1>Kathrine King</h1>
 			<h2>Web Developer</h2>
 			<h3>

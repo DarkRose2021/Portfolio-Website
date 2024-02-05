@@ -3,7 +3,7 @@ import { Image } from "react-bootstrap";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import About from "./About";
 
-const Nav = () => {
+const Banner = () => {
 
 	return (
 		<div className="hero-image">
@@ -17,4 +17,4 @@ const Nav = () => {
 	);
 };
 
-export default Nav;
+export default Banner;
