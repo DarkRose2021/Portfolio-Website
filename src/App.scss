@@ -36,40 +36,42 @@ h1 {
 	background-size: cover;
 	position: relative;
 	border-bottom: 5px #1a2223 solid;
-	.text {
-		@include borderRadiusContainers();
-		background-color: rgba($color: $blue, $alpha: 0.7);
-		margin-left: 5%;
-		margin-top: 8%;
-		text-align: center;
-		color: $gunmetal;
-		max-height: 40%;
-		padding: 1%;
-
-		button {
-			width: 111%;
-			margin-top: 4%;
-			margin-left: -5%;
-			font-size: 1.2em;
-		}
-
-		.icons {
-			color: $gunmetal;
-			font-size: 30px;
-			&:hover {
-				color: #1a2223;
-			}
-			&:active {
-				color: $gunmetal;
-			}
-		}
-	}
 	.image {
 		margin-left: -20%;
 		margin-top: 1.5%;
 		img {
 			width: 30vw;
 			position: left;
+		}
+	}
+}
+
+.text {
+	@include button();
+	@include borderRadiusContainers();
+	background-color: rgba($color: $blue, $alpha: 0.7);
+	margin-left: 5%;
+	margin-top: 8%;
+	text-align: center;
+	color: $gunmetal;
+	max-height: 40%;
+	padding: 1%;
+
+	button {
+		width: 111%;
+		margin-top: 4%;
+		margin-left: -5%;
+		font-size: 1.2em;
+	}
+
+	.icons {
+		color: $gunmetal;
+		font-size: 30px;
+		&:hover {
+			color: #1a2223;
+		}
+		&:active {
+			color: $gunmetal;
 		}
 	}
 }

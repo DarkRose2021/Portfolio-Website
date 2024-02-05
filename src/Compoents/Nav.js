@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Image } from "react-bootstrap";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import About from "./About";
 
 const Nav = () => {
+
 	return (
 		<div className="hero-image">
 			<div className="image">
