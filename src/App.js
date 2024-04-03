@@ -33,7 +33,7 @@ function App() {
 				<Banner />
 			)}
 			<College />
-			<Skills />
+			{/* <Skills /> */}
 			<Projects />
 			<ScrollToTopButton />
 			<Footer />
