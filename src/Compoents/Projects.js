@@ -1,18 +1,8 @@
-import React, { useState } from "react";
-import { Card, Button, Carousel, Image, Modal } from "react-bootstrap";
+import React from "react";
+import { Card, Button, Carousel, Image } from "react-bootstrap";
 import { projects } from "./data/projects";
 
 const Projects = () => {
-	const [selectedImage, setSelectedImage] = useState(null);
-
-	const ImageModal = ({ show, onHide, img }) => (
-		<Modal show={show} onHide={onHide} size="xl" animation>
-			<Modal.Body>
-				<Image src={img} fluid />
-			</Modal.Body>
-		</Modal>
-	);
-	
 	return (
 		<div className="allProjects">
 			<center>
@@ -23,7 +13,8 @@ const Projects = () => {
 					<div key={project.name} className="project">
 						<Card>
 							{project.name === "Mane Frame Photography" ||
-							project.name === "Uno 2.0" || project.name === "React Uno" ? (
+							project.name === "Uno 2.0" ||
+							project.name === "React Uno" ? (
 								<Carousel
 									slide={false}
 									interval={null}
@@ -35,7 +26,6 @@ const Projects = () => {
 									{project.imgs?.map((img, index) => (
 										<Carousel.Item key={img}>
 											<Image src={img} />
-											<div className="overlay"onClick={() => setSelectedImage({ projectIndex, index: index })}></div>
 										</Carousel.Item>
 									))}
 								</Carousel>
@@ -44,7 +34,6 @@ const Projects = () => {
 									{project.imgs?.map((img, index) => (
 										<Carousel.Item key={img}>
 											<Image src={img} />
-											<div className="overlay"onClick={() => setSelectedImage({ projectIndex, index: index })}></div>
 										</Carousel.Item>
 									))}
 								</Carousel>
@@ -92,7 +81,9 @@ const Projects = () => {
 														? "#e5e5e5"
 														: "none",
 												width:
-												icon === "images/icons/IntelliJ IDEA.svg" ? "35%" : ""
+													icon === "images/icons/IntelliJ IDEA.svg"
+														? "35%"
+														: "",
 											}}
 										/>
 									))}
@@ -109,17 +100,6 @@ const Projects = () => {
 					</div>
 				))}
 			</div>
-			<ImageModal
-				show={selectedImage !== null}
-				onHide={() => setSelectedImage(null)}
-				img={
-					selectedImage !== null &&
-					projects[selectedImage.projectIndex] &&
-					projects[selectedImage.projectIndex].imgs
-						? projects[selectedImage.projectIndex].imgs[selectedImage.index]
-						: null
-				}
-			/>
 		</div>
 	);
 };

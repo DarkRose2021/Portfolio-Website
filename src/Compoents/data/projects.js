@@ -83,4 +83,16 @@ export const projects = [
             "images/icons/word-svgrepo-com.svg",
         ],
     },
+    {
+        name: "NeuFoods",
+        imgs: [
+            "images/NeuFoods/"
+        ],
+        desc: "This assignment is for my Projects in User Experience class. Each assignment builds on each other. As of 12/02/2023 I am still working on this assignment. There is no repository for this because there is no coding portion, the class is meant to teach us the process of planning out a project.",
+        github: "",
+        icons: [
+            "images/icons/dart.svg",
+            "images/icons/flutter.svg"
+        ],
+    },
 ];
