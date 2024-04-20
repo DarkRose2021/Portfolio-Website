@@ -86,10 +86,13 @@ export const projects = [
     {
         name: "NeuFoods",
         imgs: [
-            "images/NeuFoods/"
+            "images/NeuFoods/home.png",
+            "images/NeuFoods/search.png",
+            "images/NeuFoods/recipe.png",
+            "images/NeuFoods/dark.png",
         ],
-        desc: "This assignment is for my Projects in User Experience class. Each assignment builds on each other. As of 12/02/2023 I am still working on this assignment. There is no repository for this because there is no coding portion, the class is meant to teach us the process of planning out a project.",
-        github: "",
+        desc: "This assignment is for my Mobile App Dev class. I made a recipe app. I was unable to add everything that I had wanted to due to my schedule, but I'm planning on continue to work on it. This app was built using flutter.",
+        github: "https://github.com/DarkRose2021/RecipeApp",
         icons: [
             "images/icons/dart.svg",
             "images/icons/flutter.svg"

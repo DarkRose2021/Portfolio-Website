@@ -18,7 +18,7 @@ const About = () => {
 					<i class="bi bi-github"></i>
 				</a>{" "}
 				<a
-					href="https://www.linkedin.com/in/kathrine-king-78247a222"
+					href="https://www.linkedin.com/in/kathrine-katie-king-78247a222/"
 					rel="noreferrer"
 					target="_blank"
 					className="icons"
