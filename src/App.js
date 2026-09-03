@@ -1,4 +1,4 @@
-import "./App.scss";
+import "./styles.scss";
 import { Routes, Route } from "react-router-dom";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
