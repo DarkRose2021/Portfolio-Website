@@ -1,44 +1,39 @@
 import "./App.scss";
-import College from "./Compoents/College";
-import Footer from "./Compoents/Footer";
-import Projects from "./Compoents/Projects";
-import ScrollToTopButton from "./Compoents/ScrollToTopButton";
-import { Analytics } from "@vercel/analytics/react";
-import Skills from "./Compoents/Skills";
-import { useEffect, useState } from "react";
-import About from "./Compoents/About";
-import Banner from "./Compoents/Banner";
+import { Routes, Route } from "react-router-dom";
+import Navigation from "./components/Navigation";
+import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import Work from "./pages/Work";
+import SweetMysticBakery from "./pages/SweetMysticBakery";
+import ManeFrame from "./pages/ManeFrame";
+import Tellus from "./pages/Tellus";
+import About from "./pages/About";
+import Resume from "./pages/Resume";
+import Contact from "./pages/Contact";
+import NotFound from "./pages/NotFound";
 
 function App() {
-	const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
-
-	useEffect(() => {
-		const handleResize = () => {
-			setIsMobile(window.innerWidth <= 768);
-		};
-
-		window.addEventListener("resize", handleResize);
-
-		return () => {
-			window.removeEventListener("resize", handleResize);
-		};
-	}, []);
 	return (
-		<div>
-			{isMobile ? (
-				<div className="text">
-					<About />
-				</div>
-			) : (
-				<Banner />
-			)}
-			<College />
-			{/* <Skills /> */}
-			<Projects />
-			<ScrollToTopButton />
+		<>
+			<Navigation />
+			<main>
+				<Routes>
+					<Route path="/" element={<Home />} />
+					<Route path="/work" element={<Work />} />
+					<Route
+						path="/work/sweet-mystic-bakery"
+						element={<SweetMysticBakery />}
+					/>
+					<Route path="/work/mane-frame" element={<ManeFrame />} />
+					<Route path="/work/tellus" element={<Tellus />} />
+					<Route path="/about" element={<About />} />
+					<Route path="/resume" element={<Resume />} />
+					<Route path="/contact" element={<Contact />} />
+					<Route path="*" element={<NotFound />} />
+				</Routes>
+			</main>
 			<Footer />
-			<Analytics />
-		</div>
+		</>
 	);
 }
 
