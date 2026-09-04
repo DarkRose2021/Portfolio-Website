@@ -11,6 +11,12 @@ export default function SweetMysticBakery() {
 			tools={["React", "Figma", "Canva", "Sass", "JavaScript"]}
 			type="Personal Business Website"
 		>
+      <div className="case-hero-image">
+				<img
+					src={desktop}
+					alt="Sweet Mystic Bakery website displayed on desktop"
+				/>
+			</div>
 			<CaseSection title="01 — Overview">
 				<h2>Building a cohesive brand and customer experience.</h2>
 				<p>

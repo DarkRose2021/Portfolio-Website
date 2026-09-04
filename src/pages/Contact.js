@@ -34,7 +34,7 @@ export default function Contact() {
 								<small>GitHub</small>github.com/DarkRose2021
 							</a>
 							<a
-								href="https://www.linkedin.com"
+								href="https://www.linkedin.com/in/kathrine-katie-king/"
 								target="_blank"
 								rel="noreferrer"
 							>
