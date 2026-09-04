@@ -199,7 +199,7 @@ h3 {
 	padding: 3rem;
 	display: flex;
 	flex-direction: column;
-	justify-content: end;
+	justify-content: flex-end;
 	background: $white;
 	border: 1px solid $line;
 	box-shadow: 30px 30px 0 rgba(31, 48, 66, 0.14);
@@ -460,7 +460,7 @@ h3 {
 	grid-template-columns: 2fr 1fr 0.55fr;
 	gap: 1rem;
 	margin-top: 3rem;
-	align-items: end;
+	align-items: flex-end;
 }
 
 .devices div {

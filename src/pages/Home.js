@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { projects } from "../data/projects";
 import ProjectCard from "../components/ProjectCard";
+import aboutImage from "../assets/MeAndMyHorse.jpg";
+
 export default function Home() {
 	return (
 		<>
@@ -75,7 +77,9 @@ export default function Home() {
 			</section>
 			<section className="section soft">
 				<div className="container two-col">
-					<div className="placeholder">KK</div>
+					<div className="about-image">
+						<img src={aboutImage} alt="Me and my horse" />
+					</div>
 					<div>
 						<p className="eyebrow">About Me</p>
 						<h2>Designer, developer, and problem solver.</h2>

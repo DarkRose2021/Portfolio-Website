@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import aboutImage from "../assets/MeAndMyHorse.jpg"
+import aboutImage from "../assets/MeAndMyHorse.jpg";
 export default function About() {
 	return (
 		<section className="section page">
@@ -9,9 +9,9 @@ export default function About() {
 					<h1>Design-minded. Detail-oriented. Always learning.</h1>
 				</div>
 				<div className="two-col about">
-					 <div className="about-image">
-        <img src={aboutImage} alt="Me and my horse" />
-      </div>
+					<div className="about-image">
+						<img src={aboutImage} alt="Me and my horse" />
+					</div>
 					<div>
 						<p className="lead">
 							I'm Kathrine, a website designer and UI/UX designer with a
@@ -35,7 +35,7 @@ export default function About() {
 				</div>
 				<div className="about-block">
 					<p className="eyebrow">My Approach</p>
-          
+
 					<div className="services">
 						<article>
 							<b>01</b>
